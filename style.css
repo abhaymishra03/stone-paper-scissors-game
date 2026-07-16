@@ -1,0 +1,225 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:#f5f5f5;
+    color:#222;
+}
+
+/* -------- CONTAINER -------- */
+
+.container{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    gap:2rem;
+
+    width:90%;
+    max-width:900px;
+}
+
+/* -------- HEADING -------- */
+
+.heading{
+
+    background:white;
+
+    padding:1rem 2.5rem;
+
+    border-radius:12px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+.heading h1{
+
+    font-size:2rem;
+    font-weight:700;
+    letter-spacing:1px;
+
+}
+
+/* -------- IMAGES -------- */
+
+.images{
+
+    display:flex;
+    gap:2rem;
+    flex-wrap:wrap;
+    justify-content:center;
+
+}
+
+.pictures{
+
+    width:170px;
+    height:170px;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    background-size:cover;
+    background-position:center;
+
+    border:5px solid white;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+    transition:all .25s ease;
+
+}
+
+.pictures:hover{
+
+    transform:translateY(-8px) scale(1.05);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.2);
+
+}
+
+.pictures:active{
+
+    transform:scale(.95);
+
+}
+
+/* -------- BACKGROUND IMAGES -------- */
+
+#stone{
+
+    background-image:url("images/stone.png");
+
+}
+
+#paper{
+
+    background-image:url("images/paper.png");
+
+}
+
+#scissors{
+
+    background-image:url("images/scissors.png");
+
+}
+
+/* -------- SCOREBOARD -------- */
+
+.scoreboard{
+
+    display:flex;
+    justify-content:center;
+    gap:5rem;
+
+    background:white;
+
+    padding:1rem 3rem;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+.score{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+}
+
+#user-score,
+#comp-score{
+
+    font-size:3rem;
+    font-weight:bold;
+
+}
+
+.score p:last-child{
+
+    font-size:1rem;
+    color:#666;
+
+}
+
+/* -------- WINNER PANEL -------- */
+
+.winner-panel{
+
+    min-width:320px;
+
+    text-align:center;
+
+    padding:1rem 2rem;
+
+    background:#222;
+
+    color:white;
+
+    border-radius:12px;
+
+    font-size:1.2rem;
+
+    font-weight:600;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+}
+
+/* -------- RESPONSIVE -------- */
+
+@media(max-width:650px){
+
+    .pictures{
+
+        width:120px;
+        height:120px;
+
+    }
+
+    .heading h1{
+
+        font-size:1.5rem;
+
+    }
+
+    .scoreboard{
+
+        gap:2rem;
+
+        padding:1rem;
+
+    }
+
+    #user-score,
+    #comp-score{
+
+        font-size:2.3rem;
+
+    }
+
+    .winner-panel{
+
+        min-width:250px;
+
+        font-size:1rem;
+
+    }
+
+}
